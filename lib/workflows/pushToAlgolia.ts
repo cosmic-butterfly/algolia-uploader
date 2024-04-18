@@ -39,7 +39,7 @@ export async function pushToAlgolia(
     }
     return {
       objectID: record.articleId.toString(),
-      article: serializableRecord,
+      ...serializableRecord,
     }
   })
   await index.saveObjects(recordsWithIds);

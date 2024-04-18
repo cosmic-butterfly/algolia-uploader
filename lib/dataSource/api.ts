@@ -26,7 +26,7 @@ import {
     if (process.env.NETWORK == "SEPOLIA") {
       return sepolia
     } else if (process.env.NETWORK == "BASE") {
-      return base
+      return base as Chain;
     } else {
       console.log("invalid network! set the env variable for network:", process.env.NETWORK)
       process.abort()
